@@ -1,0 +1,190 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+@import "tailwindcss";
+
+@layer base {
+  * {
+    font-family: 'Poppins', system-ui, -apple-system, sans-serif;
+  }
+  
+  body {
+    @apply bg-gradient-to-br from-[#fdf4f3] to-[#fff3e8];
+    font-family: 'Poppins', sans-serif;
+  }
+}
+
+@layer components {
+  /* Soft Cute Card Styles */
+  .cute-card {
+    @apply bg-white/80 backdrop-blur-sm rounded-2xl p-5 shadow-sm;
+    box-shadow: 0 8px 32px rgba(255, 182, 193, 0.1);
+    border: 1px solid rgba(255, 218, 185, 0.3);
+  }
+  
+  .cute-card-pink {
+    background: linear-gradient(135deg, #fff0f3 0%, #ffe4e8 100%);
+    border: 1px solid rgba(255, 182, 193, 0.4);
+  }
+  
+  .cute-card-blue {
+    background: linear-gradient(135deg, #f0f7ff 0%, #e8f0fe 100%);
+    border: 1px solid rgba(147, 197, 253, 0.3);
+  }
+  
+  .cute-card-purple {
+    background: linear-gradient(135deg, #f5f0ff 0%, #ede8ff 100%);
+    border: 1px solid rgba(192, 132, 252, 0.3);
+  }
+  
+  .cute-card-green {
+    background: linear-gradient(135deg, #f0fdf4 0%, #e6f7ec 100%);
+    border: 1px solid rgba(74, 222, 128, 0.3);
+  }
+  
+  .cute-card-peach {
+    background: linear-gradient(135deg, #fff5f0 0%, #ffefe5 100%);
+    border: 1px solid rgba(253, 186, 116, 0.3);
+  }
+  
+  .cute-card-mint {
+    background: linear-gradient(135deg, #f0fdfa 0%, #e6f7f3 100%);
+    border: 1px solid rgba(94, 234, 212, 0.3);
+  }
+  
+  .cute-card-lavender {
+    background: linear-gradient(135deg, #faf5ff 0%, #f3e8ff 100%);
+    border: 1px solid rgba(216, 180, 254, 0.3);
+  }
+
+  .cute-btn {
+    @apply rounded-xl font-medium transition-all duration-200;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  .cute-btn-primary {
+    @apply bg-gradient-to-r from-pink-400 to-rose-400 text-white px-4 py-2 rounded-xl 
+           hover:from-pink-500 hover:to-rose-500 transition-all duration-200 shadow-sm;
+  }
+  
+  .cute-btn-secondary {
+    @apply bg-gradient-to-r from-blue-400 to-indigo-400 text-white px-4 py-2 rounded-xl 
+           hover:from-blue-500 hover:to-indigo-500 transition-all duration-200 shadow-sm;
+  }
+
+  .cute-input {
+    @apply w-full px-4 py-2 rounded-xl border border-pink-100 bg-white/80 
+           focus:outline-none focus:ring-2 focus:ring-pink-300 focus:border-transparent
+           transition-all duration-200;
+    font-family: 'Poppins', sans-serif;
+  }
+
+  .cute-badge {
+    @apply px-2 py-0.5 text-xs rounded-full font-medium;
+  }
+  
+  .cute-badge-pink {
+    @apply bg-pink-100 text-pink-600;
+  }
+  
+  .cute-badge-green {
+    @apply bg-green-100 text-green-600;
+  }
+  
+  .cute-badge-orange {
+    @apply bg-orange-100 text-orange-600;
+  }
+  
+  .cute-badge-purple {
+    @apply bg-purple-100 text-purple-600;
+  }
+  
+  .cute-badge-blue {
+    @apply bg-blue-100 text-blue-600;
+  }
+
+  .cute-table {
+    @apply w-full text-sm;
+  }
+  
+  .cute-table th {
+    @apply px-5 py-3 text-left text-xs font-semibold text-gray-500 uppercase tracking-wider;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  .cute-table td {
+    @apply px-5 py-3 text-gray-600;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  .cute-table tr {
+    @apply border-b border-pink-50 hover:bg-pink-50/30 transition-colors;
+  }
+
+  .icon-glass {
+    position: relative;
+    display: inline-flex;
+    flex: 0 0 auto;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.82);
+    background:
+      linear-gradient(145deg, rgba(255, 255, 255, 0.78), rgba(255, 255, 255, 0.34)),
+      rgba(255, 255, 255, 0.32);
+    box-shadow:
+      inset 0 1px 0 rgba(255, 255, 255, 0.9),
+      inset 0 -1px 0 rgba(255, 255, 255, 0.24),
+      0 8px 22px rgba(15, 23, 42, 0.09);
+    -webkit-backdrop-filter: blur(18px) saturate(170%);
+    backdrop-filter: blur(18px) saturate(170%);
+    transition: transform 180ms ease, box-shadow 180ms ease, background 180ms ease;
+  }
+
+  .icon-glass::before {
+    content: "";
+    position: absolute;
+    inset: 1px 12% auto;
+    height: 38%;
+    border-radius: 999px;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.7), transparent);
+    pointer-events: none;
+  }
+
+  .icon-glass > svg,
+  .icon-glass > img {
+    position: relative;
+    z-index: 1;
+  }
+
+  .icon-glass--sm { width: 2rem; height: 2rem; border-radius: 0.72rem; }
+  .icon-glass--md { width: 2.5rem; height: 2.5rem; border-radius: 0.9rem; }
+  .icon-glass--lg { width: 3rem; height: 3rem; border-radius: 1.05rem; }
+
+  .icon-glass--dark {
+    border-color: rgba(255, 255, 255, 0.38);
+    background: linear-gradient(145deg, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.12));
+    box-shadow:
+      inset 0 1px 0 rgba(255, 255, 255, 0.52),
+      0 10px 24px rgba(15, 23, 42, 0.16);
+  }
+
+  .icon-glass--interactive:hover {
+    transform: translateY(-1px) scale(1.04);
+    box-shadow:
+      inset 0 1px 0 rgba(255, 255, 255, 0.95),
+      0 12px 26px rgba(15, 23, 42, 0.13);
+  }
+
+  /* Scrollbar */
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    @apply bg-pink-50 rounded-full;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    @apply bg-pink-300 rounded-full hover:bg-pink-400;
+  }
+}

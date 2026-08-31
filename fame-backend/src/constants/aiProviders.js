@@ -1,0 +1,65 @@
+const AI_PROVIDERS = {
+    gemini: {
+        id: 'gemini',
+        label: 'Google Gemini',
+        chatModels: ['gemini-2.5-flash', 'gemini-2.5-pro', 'gemini-2.0-flash', 'gemini-2.0-flash-lite'],
+        codingModels: ['gemini-2.5-pro', 'gemini-2.5-flash', 'gemini-2.0-flash'],
+        defaultCodingModel: 'gemini-2.5-pro',
+        embedModels: ['gemini-embedding-2', 'text-embedding-004'],
+        defaultChatModel: 'gemini-2.5-flash',
+        defaultEmbedModel: 'gemini-embedding-2',
+    },
+    openrouter: {
+        id: 'openrouter',
+        label: 'OpenRouter',
+        chatModels: [
+            'nvidia/nemotron-3.5-lightning:free',
+            'deepseek/deepseek-v4-flash-0731',
+            'stealth/ox-alpha',
+            'tencent/hy-mt2-7b',
+            'xiaomi/mimo-v2.5',
+            'openrouter/free',
+            'openai/gpt-4o-mini',
+            'openai/gpt-4o',
+            'anthropic/claude-3.5-sonnet',
+            'google/gemini-2.5-pro',
+            'google/gemma-4-26b-a4b-it:free',
+            'google/gemma-4-31b-it:free',
+            'qwen/qwen3.7-flash',
+            'liquid/lfm-2.5-2.6b:free',
+        ],
+        codingModels: [
+            'deepseek/deepseek-v4-flash-0731',
+            'stealth/ox-alpha',
+            'xiaomi/mimo-v2.5',
+            'openrouter/free',
+            'openai/gpt-4o',
+            'anthropic/claude-3.5-sonnet',
+            'openai/gpt-4o-mini',
+            'google/gemini-2.5-pro',
+            'google/gemma-4-26b-a4b-it:free',
+        ],
+        defaultCodingModel: 'openai/gpt-4o-mini',
+        embedModels: [
+            'nvidia/nemotron-3-embed-1b:free',
+            'liquid/lfm-2.5-embedding-350m:free',
+            'openai/text-embedding-3-small',
+        ],
+        defaultChatModel: 'nvidia/nemotron-3.5-lightning:free',
+        defaultEmbedModel: 'nvidia/nemotron-3-embed-1b:free',
+    },
+    openai: {
+        id: 'openai',
+        label: 'OpenAI',
+        chatModels: ['gpt-4o-mini', 'gpt-4o', 'gpt-4.1-mini'],
+        codingModels: ['gpt-4o', 'gpt-4o-mini', 'gpt-4.1-mini'],
+        defaultCodingModel: 'gpt-4o-mini',
+        embedModels: ['text-embedding-3-small', 'text-embedding-3-large'],
+        defaultChatModel: 'gpt-4o-mini',
+        defaultEmbedModel: 'text-embedding-3-small',
+    },
+};
+
+const SETTINGS_KEY = 'ai_config';
+
+module.exports = { AI_PROVIDERS, SETTINGS_KEY };

@@ -1,0 +1,42 @@
+# Track only fame-backend/ and fame-frontend/
+/*
+!/.gitignore
+!/fame-backend/
+!/fame-frontend/
+
+# Dependencies & build
+node_modules/
+dist/
+dist-ssr/
+.vite/
+coverage/
+
+# Secrets
+.env
+.env.*
+!.env.example
+
+# Runtime / local data
+uploads/
+logs/
+code-exports/
+*.log
+
+# IDE & tooling
+.cursor/
+.vscode/
+.idea/
+.claude/
+*.local
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Archives
+*.zip
+
+# Draw.io autosave backups
+*.bkp
+.$*
